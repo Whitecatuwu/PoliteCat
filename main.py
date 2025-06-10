@@ -28,6 +28,12 @@ async def on_message(message):
 
     result = output_label(message.content)
     if any(result[label]["pred"] for label in result):
+        print(f"⚠️ 有害訊息來自 {message.author} 在 #{message.channel.name} 中")
+        print(f"內容: {message.content}")
+        for label, details in result.items():
+            print(
+                f"{label:15}: {'✅' if details['pred'] else '❌'} (score={details['score']:.4f})"
+            )
 
         webhooks = await message.channel.webhooks()
         webhook = None
@@ -54,6 +60,8 @@ async def on_message(message):
             )
         except discord.Forbidden:
             print(f"❌ 無法私訊 {message.author}")
+
+    await bot.process_commands(message)
 
 
 # 啟動 bot（請替換成你自己的 token）

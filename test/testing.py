@@ -35,3 +35,13 @@ def output_label(text) -> dict:
         # print(f"{label:15}: {'✅' if pred else '❌'} (score={prob:.4f})")
 
     return result
+
+
+if __name__ == "__main__":
+    # 測試輸出
+    text = "You so ugly, you look like a monkey."
+    result = output_label(text)
+    for label, info in result.items():
+        print(
+            f"{label:15}: {'✅' if info['pred'] else '❌'} (score={info['score']:.4f})"
+        )

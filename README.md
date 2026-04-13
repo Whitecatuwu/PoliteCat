@@ -9,3 +9,5 @@ https://drive.google.com/file/d/1ihC5U5CocEM78G25atsgEat0rIZ90aKu/view?usp=drive
 3. 新增.env，放入你的discord bot token
 4. 啟動main.py，啟動bot
 
+# PPT
+https://docs.google.com/presentation/d/1Hv0KWbqQg8to50h88kEXWakPa57ou4l8W78qF8zCnrI/edit?hl=zh-tw&slide=id.g36075d41a68_0_270#slide=id.g36075d41a68_0_270
